@@ -5,40 +5,92 @@
   }
   
   body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
+    font-family: 'Instrument Sans';
+    background-color: #040A01;
+  }
+
+  .navbar {
+    background: rgba(19, 50, 6, 0.2);
+    backdrop-filter: blur(50px);
+  }
+
+  .navbar__container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 95px;
+    padding: 16px 160px;
+    flex: none;
+    order: 7;
+    align-self: stretch;
+    flex-grow: 0;
+    z-index: 7;
+  }
+
+  .navbar__logo {
+    margin: 0 auto;
+    width: 147px;
+    height: 39px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
   }
   
-  header {
-    background: #333;
-    color: #fff;
-    padding: 1rem;
-    text-align: center;
+  .navbar__links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 54px;
+    padding: 0px;
+    gap: 54px;
+    margin: 0 auto;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+
   }
-  
-  nav a {
-    color: #fff;
+
+  .navbar__links a {
     text-decoration: none;
-    margin: 0 10px;
+    font-size: 18px;
+    font-family: 'Instrument Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    color: #B9B9B9;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
   }
   
-  main {
-    padding: 1rem;
+  .button {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 40px;
+    gap: 8px;
+    margin: 0 auto;
+    width: 174px;
+    height: 51px;
+    background: #5FEC23;
+    border-radius: 56px;
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+    text-decoration: none;
+    font-family: 'Instrument Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+    color: #000000;
   }
+
   
-  .image-container img {
-    margin: 10px;
-    width: 150px;
-    height: 150px;
-  }
-  
-  form input, form textarea, form button {
-    display: block;
-    margin: 10px 0;
-    padding: 10px;
-    width: 100%;
-    max-width: 400px;
-  }
   
