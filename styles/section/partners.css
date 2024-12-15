@@ -1,0 +1,15 @@
+.partners-section{
+    min-height: 125vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+  
+.partners-section-row{
+    width:77.78%;
+    display: flex;
+    flex-direction: column;
+    gap: 13vh;
+}

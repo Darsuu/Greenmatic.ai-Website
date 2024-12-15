@@ -1,0 +1,147 @@
+
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+  }
+  
+.hero-section-ellipse {
+  position: relative;
+  width: 80vw;
+  height: 80vw;
+  border-radius: 50%;
+  filter: drop-shadow(0px 0px 5vw #4dff000c);
+  background: linear-gradient(#107239, #000000);
+}
+  
+.hero-section-ellipse-inner {
+  position: absolute;
+  top: 0.25%;
+  left: 0.25%;
+  width: 99.5%;
+  height: 99.5%;
+  content: "";
+  background-color: #040A01;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.hero-section-highlight-description-box {
+  width: 82%;
+}
+
+.hero-section-highlight-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-height: 75%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1vw;
+}
+
+
+.hero-section-gif-box{
+  position: relative;
+  width: 80%;
+  height: auto;
+  border-radius: 24px;
+  margin-top: 2vw;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+  
+.hero-section-gif-box-bg{
+  width: 100%;
+  height: 100%; 
+  object-fit: cover; 
+  display: block;
+}
+
+.hero-section-gif-box-gif{
+  position: absolute;
+  top: 0%;
+  width: 71%; 
+  height: 58%; 
+  object-fit: cover; 
+  display: block;
+}
+
+.hero-section-gif-box-text {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 55%;
+  font-weight: 500;
+  font-size: clamp(0.875rem, 1.5vw, 1.125rem);
+  line-height: 120%;
+  text-align: center;
+  letter-spacing: -0.02em;
+  color: #FFFFFF;
+}
+
+.mobile-hero-section-highlight-box {
+  margin-top: 17.5vw;
+  min-width: 100%;
+  max-height: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1vw;
+}
+
+.mobile-hero-section-gif-box{
+  position: relative;
+  width: 100%;
+  height: 100vw;
+  border-radius: 24px;
+  margin-top: 2vw;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+  
+.mobile-hero-section-gif-box-bg{
+  width: 100%;
+  height: 100%; 
+  object-fit: contain; 
+  display: block;
+}
+
+.mobile-hero-section-gif-box-gif{
+  position: absolute;
+  top: -5.5%;
+  width: 74%; 
+  height: 58%; 
+  object-fit: contain; 
+  display: block;
+}
+
+.mobile-hero-section-gif-box-text {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  font-weight: 500;
+  font-size: clamp(0.875rem, 1.3vw, 1.125rem);
+  line-height: 120%;
+  text-align: center;
+  letter-spacing: -0.02em;
+  color: #FFFFFF;
+}
