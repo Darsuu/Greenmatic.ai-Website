@@ -7,17 +7,27 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles/style.css">
+    
+    <link rel="stylesheet" href="styles/base.css">
+
+    <!-- Sections -->
+    <link rel="stylesheet" href="styles/section/approach.css">
+    <link rel="stylesheet" href="styles/section/challenge.css">
+    <link rel="stylesheet" href="styles/section/hero.css">
+    <link rel="stylesheet" href="styles/section/globe.css">
+    <link rel="stylesheet" href="styles/section/partners.css">
+    <link rel="stylesheet" href="styles/section/solution.css">
+
     <title>Greenmatic LP</title>
 </head>
 <body>
     <header>
         <nav class="navbar row fixed-top justify-content-between align-items-center p-3">
             <div class="col d-flex justify-content-center align-items-center">
-                <img src="images/logo.png" alt="Greenmatic.ai Logo" class="img-fluid">
+                <img src="images/icons/logo.png" alt="Greenmatic.ai Logo" class="img-fluid">
             </div>
             <div class="col d-flex justify-content-center align-items-center">
-                <div class="row d-none d-md-flex gap-4">
+                <div class="row d-none d-lg-flex gap-4">
                     <div class="col">
                         <a href="#approach" class="navbar-links">Approach</a>
                       </div>
@@ -29,16 +39,42 @@
                       </div>
                 </div>
             </div>
-            <div class="col d-flex justify-content-center align-items-center">
+            <div class="col d-none d-lg-flex justify-content-center align-items-center">
                 <a href="#"  class="btn" role="button"> Book a demo </a>
+            </div>
+            <div class="col d-flex d-lg-none justify-content-end">
+              <img src="images/icons/list.png" alt="Action List" class="img-fluid">
             </div>
         </nav>
     </header>
   
     <main>
-      <section id="hero" class="hero-section">
-        <div class="container d-none d-md-block hero-section-ellipse"></div>
-          <div class="container text-center hero-section-highlight-box gap-3">
+      <div class="flex-container">
+        <section id="hero" class="hero-section">
+          <!-- FOR LAPTOP AND LARGER SCREENS -->
+          <div class="d-none d-lg-flex hero-section-ellipse">
+            <div class="hero-section-ellipse-inner"></div>
+            <div class="hero-section-highlight-box">
+              <h1 class="section-highlight-title">
+                Revolutionising Advertising with <br>
+                Sustainable, High-Impact Solutions
+              </h1>
+              <div class="hero-section-highlight-description-box">
+                <p class="section-highlight-description">
+                  We're transforming digital advertising to set a new standard of efficiency and environmental responsibility, driving the industry toward carbon neutrality.
+                </p>
+              </div>
+              <a href="#"  class="btn" role="button"> Book a demo </a>
+              <div class="hero-section-gif-box">
+                <p class="hero-section-gif-box-text">Helping brands reduce carbon footprints & 
+                  reach sustainability goals.</p>
+                <img src="images/web/hero/gif_bg.png" alt="GreenCPM gif" class="hero-section-gif-box-bg img-fluid">
+                <img src="images/web/hero/green_cpm.gif" alt="GreenCPM Animation" class="hero-section-gif-box-gif img-fluid">
+              </div>
+            </div>
+          </div>
+          <!-- FOR TABLET AND SMALLER SCREENS -->
+          <div class="d-lg-none mobile-hero-section-highlight-box">
             <h1 class="section-highlight-title">
               Revolutionising Advertising with <br>
               Sustainable, High-Impact Solutions
@@ -49,75 +85,113 @@
               </p>
             </div>
             <a href="#"  class="btn" role="button"> Book a demo </a>
-        </div>
-
-        </div>
-      </section>
-  
-      <section id="challenge" class="challenge-section"> 
-        <div class="container text-center challenge-section-highlight-box gap-3">
-          <h1 class="section-highlight-title">
-            Challenge in focus
-          </h1>
-          <div class="challenge-section-highlight-description-box">
-            <p class="section-highlight-description">
-              Programmatic advertising's crowded supply chain generates the lion share of CO2 emissions.
-            </p>
+            <!-- FOR TABLET -->
+            <div class="d-none d-md-flex hero-section-gif-box">
+              <p class="hero-section-gif-box-text">Helping brands reduce carbon footprints & 
+                reach sustainability goals.</p>
+              <img src="images/web/hero/gif_bg.png" alt="GreenCPM gif" class="hero-section-gif-box-bg img-fluid">
+              <img src="images/web/hero/green_cpm.gif" alt="GreenCPM Animation" class="hero-section-gif-box-gif img-fluid">
+            </div>
+            <!-- FOR MOBILE -->
+            <div class="d-sm-flex d-md-none mobile-hero-section-gif-box">
+              <p class="mobile-hero-section-gif-box-text">Helping brands reduce carbon footprints & 
+                reach sustainability goals.</p>
+              <img src="images/mobile/hero/gif_bg.png" alt="GreenCPM gif" class="mobile-hero-section-gif-box-bg img-fluid">
+              <img src="images/web/hero/green_cpm.gif" alt="GreenCPM Animation" class="mobile-hero-section-gif-box-gif img-fluid">
+            </div>
           </div>
-        </div>
+        </section>
+        <section id="challenge" class="challenge-section">
+          <!-- FOR LAPTOP AND LARGER SCREENS -->
+          <div class="d-none d-md-flex flex-column justify-content-center align-items-center"> 
+            <div class="challenge-section-ellipse"></div>
+            <div class="challenge-section-highlight-box">
+              <h1 class="section-highlight-title">
+                Challenge in focus
+              </h1>
+              <div class="challenge-section-highlight-description-box">
+                <p class="section-highlight-description">
+                  Programmatic advertising's crowded supply chain generates the lion share of CO2 emissions.
+                </p>
+              </div>
+            </div>
+            <div class="challenge-section-pie-chart">
+              <img src="/images/web/challenge/pie_chart.png" alt="Pie Chart" class="challenge-section-pie-chart-img img-fluid">
+            </div>
+          </div>
+  
+          <!-- FOR MOBILE AND SMALLER SCREENS -->
+          <div class="d-flex d-md-none flex-column justify-content-center align-items-center position-relative">
+            <div class="mobile-challenge-section-ellipse"></div>
+            <div class="mobile-challenge-section-highlight-box">
+              <h1 class="section-highlight-title">
+                Challenge in focus
+              </h1>
+              <div class="challenge-section-highlight-description-box">
+                <p class="section-highlight-description">
+                  Programmatic advertising's crowded supply chain generates the lion share of CO2 emissions.
+                </p>
+              </div>
+            </div>
+            <div class="challenge-section-pie-chart">
+              <img src="/images/mobile/challenge/pie_chart.png" alt="Pie Chart" class="challenge-section-pie-chart-img img-fluid">
+            </div>
+            <div class="mobile-challenge-section-legend">
+              <img src="/images/mobile/challenge/legend.png" alt="Pie Chart Legend" class="mobile-challenge-section-legend-img img-fluid">
+            </div>
+          </div>
       </section>
-
-      <section id="approach" class="approach-section">
-        <div class="container text-center approach-section-highlight-box gap-5">
+      <section id="approach" class="approach-section gap-5">
+        <div class="container approach-section-highlight-box">
           <h1 class="section-highlight-title">
             Our Approach
           </h1>
-          <div class="scrolling-cards-wrapper">
-            <div class="scrolling-cards gap-4">
-              <div class="container card">
-                <img src="images/web/approach/phone_call_card.png" alt="Card 4 Background" class="card-bg">
-                <div class="card-content">
-                  <p>Carbon reduction achieved by minimising partner calls</p>
-                </div>
-              </div>
-              <div class="card">
-                <img src="images/web/approach/co2_card.png" alt="Card 1 Background" class="card-bg">
-                <div class="card-content">
-                  <p>Monitor and measure operational CO<sub>2</sub> input</p>
-                </div>
-              </div>
-              <div class="card">
-                <img src="images/web/approach/efficiency_card.png" alt="Card 2 Background" class="card-bg">
-                <div class="card-content">
-                  <p>No added operations complexity</p>
-                </div>
-              </div>
-              <div class="card">
-                <img src="images/web/approach/inventory_card.png" alt="Card 3 Background" class="card-bg">
-                <div class="card-content">
-                  <p>Eco-friendly inventory for maximum efficiency & minimal carbon emission</p>
-                </div>
+        </div>
+        <div class="scrolling-cards-wrapper">
+          <div class="scrolling-cards gap-4">
+            <div class="container card">
+              <img src="images/web/approach/phone_call_card.png" alt="Card 4 Background" class="card-bg">
+              <div class="card-content">
+                <p>Carbon reduction achieved by minimising partner calls</p>
               </div>
             </div>
-        </div>
+            <div class="card">
+              <img src="images/web/approach/co2_card.png" alt="Card 1 Background" class="card-bg">
+              <div class="card-content">
+                <p>Monitor and measure operational CO<sub>2</sub> input</p>
+              </div>
+            </div>
+            <div class="card">
+              <img src="images/web/approach/efficiency_card.png" alt="Card 2 Background" class="card-bg">
+              <div class="card-content">
+                <p>No added operations complexity</p>
+              </div>
+            </div>
+            <div class="card">
+              <img src="images/web/approach/inventory_card.png" alt="Card 3 Background" class="card-bg">
+              <div class="card-content">
+                <p>Eco-friendly inventory for maximum efficiency & minimal carbon emission</p>
+              </div>
+            </div>
+          </div>
       </section>
 
       <section id="solution" class="solution-section">
-        <div class = "container solution-section-outerbox gap-5">
-          <div class="container text-center solution-section-highlight-box gap-3">
+        <div class = "solution-section-outerbox gap-5">
+          <div class=" solution-section-highlight-box gap-3">
             <h1 class="section-highlight-title">
               Our Solution
             </h1>
-            <div class="challenge-section-highlight-description-box">
+            <div class="solution-section-highlight-description-box">
               <p class="section-highlight-description">
                 Explore a range of solutions that prioritize performance, transparency, and eco-conscious practices to align with your goals for a greener future.
               </p>
             </div>
           </div>
-  
-          <div class="solution-section-content-box gap-4">
-              <div class="row gap-1">
-                <!-- Card 1 -->
+          
+          <!-- FOR TABLET AND LARGER SCREENS -->
+          <div class="d-none d-md-flex solution-section-content-box gap-4">
+              <div class="row">
                 <div class="col">
                   <div class="solution-card">
                     <img src="images/web/solution/ai_media_buying.svg" class="card-img-top" alt="AI Media Buying">
@@ -127,7 +201,6 @@
                     </div>
                   </div>
                 </div>
-                <!-- Card 2 -->
                 <div class="col">
                   <div class="solution-card">
                     <img src="images/web/solution/co2_efficiency.svg" class="card-img-top" alt="CO₂ Analytics">
@@ -138,8 +211,7 @@
                   </div>
                 </div>
               </div>
-              <div class="row gap-1">
-                <!-- Card 3 -->
+              <div class="row">
                 <div class="col">
                   <div class="solution-card">
                     <img src="images/web/solution/brand_lift_study.svg" class="card-img-top" alt="Brand Lift Study">
@@ -149,7 +221,6 @@
                     </div>
                   </div>
                 </div>
-                <!-- Card 4 -->
                 <div class="col">
                   <div class="solution-card">
                     <img src="images/web/solution/media_efficiency.svg" class="card-img-top" alt="Media Efficiency">
@@ -160,7 +231,7 @@
                   </div>
                 </div>
               </div>
-              <div class="row gap-1">
+              <div class="row">
                 <div class="col">
                   <div class="solution-card-lower-cards gap-1">
                     <div class="solution-card-lower-cards-title-box">
@@ -236,20 +307,52 @@
               </div>
           </div>
         </div>
-        
       </section>
 
-      <section id="partners">
-       
+      <!-- <section id="partners" class="partners-section">
+        <div class="partners-section-row">
+          <img src="images/web/partners.svg" class="img-fluid" alt="Our Partners">
+          <img src="images/web/ad_fraud.svg" class="img-fluid" alt="Ad Fraud Protection">
+        </div>
       </section>
-      <section id="globe">
-        
-      </section>
+
+      <section id="globe" class="globe-section">
+          <div class="container globe-section-box">
+              <img src='/images/web/globe/globe_bg.png' alt = 'Spinning Globe Video' class="img-fluid">
+          </div>
+      </section> -->
+      </div>
     </main>
   
-    <footer>
-     
-    </footer>
+  <!-- <footer class="footer">
+      <div class="footer-outer-box">
+        <div class="footer-brand">
+          <img src="images/icons/logo.png" alt="Greenmatic.ai Logo" class="img-fluid">
+          <p class="footer-text px-1 py-2">Responsible advertising</p>
+        </div>
+    
+        <div class="footer-copyright">
+          <p>2024 - Copyright, All rights reserved</p>
+        </div>
+    
+        <div class="footer-contact gap-3">
+          <div class="social-icons">
+            <a href="#" class="social-icon">
+              <img src="images/web/icons/x.svg" class = "img-fluid" alt="X">
+            </a>
+            <a href="#" class="social-icon">
+              <img src="images/web/icons/linkedin.svg" class = "img-fluid" alt="LinkedIn">
+            </a>
+          </div>
+          <div>
+            <p class="footer-contact-text">Partnership@greenmatic.ai</p>
+            <p class="footer-contact-text">Dubai, United Arab Emirates</p>
+          </div>
+          
+        </div>
+      </div>
+  </footer> -->
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
