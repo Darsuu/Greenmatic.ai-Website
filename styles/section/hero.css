@@ -106,7 +106,7 @@
 .mobile-hero-section-gif-box{
   position: relative;
   width: 100%;
-  height: 100vw;
+  height: 85vw;
   border-radius: 24px;
   margin-top: 2vw;
 
@@ -125,9 +125,9 @@
 
 .mobile-hero-section-gif-box-gif{
   position: absolute;
-  top: -5.5%;
-  width: 74%; 
-  height: 58%; 
+  top: -6.75%;
+  width: 65%; 
+  height: 60%; 
   object-fit: contain; 
   display: block;
 }
