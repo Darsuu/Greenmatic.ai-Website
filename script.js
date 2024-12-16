@@ -58,3 +58,22 @@ container.addEventListener("mousemove", (e) => {
   const walk = x - startX;
   container.scrollLeft = scrollLeft - walk;
 });
+
+const menuIcon = document.getElementById('menu-icon');
+  const dropdown = document.getElementById('dropdown');
+  const menuIconImg = menuIcon.querySelector('img');
+
+  menuIcon.addEventListener('click', () => {
+    // Toggle dropdown visibility
+    dropdown.classList.toggle('open');
+    console.log("here");
+
+    // Toggle icon between menu and cancel
+    if (dropdown.classList.contains('open')) {
+      console.log("here");
+      menuIconImg.src = 'images/icons/cancel_icon.png'; // Change to cancel icon
+    } else {
+      console.log("here2");
+      menuIconImg.src = 'images/icons/menu_icon.png'; // Change back to menu icon
+    }
+  });
