@@ -1,28 +1,48 @@
-// Vertical dragging logic for the entire page
 let curYPos = 0;
 let curDown = false;
+let velocity = 0; // Current scroll velocity
+let lastYPos = 0; // Last recorded Y position
+let dampingFactor = 0.85; // Deceleration factor for inertia
+let animationFrameId = null;
 
-/* Mouse move: Handle vertical dragging for the page */
+/* Mouse move: Calculate velocity for smoother dragging */
 document.addEventListener("mousemove", (event) => {
+  event.preventDefault(); // Prevent text selection
   if (curDown) {
-    window.scrollTo(0, window.scrollY + (curYPos - event.pageY));
+    velocity = -(event.pageY - lastYPos)*0.3; // Calculate velocity
   }
 });
 
-/* Mouse down: Initiate vertical dragging */
+/* Mouse down: Start dragging */
 document.addEventListener("mousedown", (event) => {
-  // Prevent vertical dragging if inside the horizontal container
-  // if (event.target.closest(".scrolling-cards-wrapper")) return;
-
+  event.preventDefault();
   curDown = true;
-  curYPos = event.pageY;
-  event.preventDefault(); // Prevent text selection while dragging
+  lastYPos = event.pageY;
+  velocity = 0; // Reset velocity
 });
 
-/* Mouse up: Stop vertical dragging */
+/* Mouse up: Enable smooth inertia scrolling */
 window.addEventListener("mouseup", () => {
   curDown = false;
+
+  // Start deceleration animation
+  if (animationFrameId) {
+    cancelAnimationFrame(animationFrameId);
+  }
+  animateInertia();
 });
+
+/* Inertia animation function */
+function animateInertia() {
+  if (Math.abs(velocity) > 0.5) { // Threshold to stop animation
+    window.scrollTo(0, window.scrollY + velocity);
+    velocity *= dampingFactor; // Apply damping to reduce velocity
+    animationFrameId = requestAnimationFrame(animateInertia);
+  } else {
+    velocity = 0; // Stop completely
+    cancelAnimationFrame(animationFrameId);
+  }
+}
 
 // Horizontal dragging logic for the cards
 const container = document.querySelector(".scrolling-cards-wrapper");
