@@ -13,7 +13,7 @@
     width: 65vw;
     z-index: 1;
   }
-  
+
   .scrolling-cards-wrapper {
     overflow: hidden;
     padding-left: 11.1%;
@@ -90,3 +90,51 @@
     }
   }
 
+  .scroll-button-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .scroll-button {
+    background-color: transparent;
+    border: none;
+    font-size: 2.5rem;
+    color: #B9B9B9;
+    cursor: pointer;
+    z-index: 10;
+  }
+    
+  .scroll-button.focus,
+  .scroll-button:focus {
+      color: #5FEC23;
+      outline: none;
+      box-shadow: none;
+      }
+
+  .scroll-button:hover {
+      color: #5FEC23;
+      outline: none;
+      box-shadow: none;
+    }
+
+  .scroll-button.active,
+  .scroll-button:active {
+      color: #5FEC23;
+      outline: none;
+    }
+
+  .scroll-button.active.focus,
+  .scroll-button.active:focus,
+  .scroll-button.active:hover,
+  .scroll-button:active.focus,
+  .scroll-button:active:focus,
+  .scroll-button:active:hover {
+      color: #5FEC23;
+      outline: none;
+      box-shadow: none;
+    }
+
+    

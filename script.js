@@ -44,56 +44,39 @@ function animateInertia() {
   }
 }
 
-// Horizontal dragging logic for the cards
-const container = document.querySelector(".scrolling-cards-wrapper");
-const cards = document.querySelector(".scrolling-cards");
+const scrollLeftButton = document.getElementById('scroll-left');
+const scrollRightButton = document.getElementById('scroll-right');
+const scrollingCards = document.querySelector('.scrolling-cards-wrapper');
 
-let isPressedDown = false;
-let startX;
-let scrollLeft;
-
-/* Mouse down: Initiate horizontal dragging */
-container.addEventListener("mousedown", (e) => {
-  isPressedDown = true;
-  startX = e.pageX - container.offsetLeft;
-  scrollLeft = container.scrollLeft;
-  e.preventDefault(); // Prevent default behavior
-});
-
-/* Mouse up: Stop horizontal dragging */
-container.addEventListener("mouseup", () => {
-  isPressedDown = false;
-});
-
-/* Mouse leave: Stop dragging if cursor leaves the container */
-container.addEventListener("mouseleave", () => {
-  isPressedDown = false;
-});
-
-/* Mouse move: Drag the cards horizontally */
-container.addEventListener("mousemove", (e) => {
-  if (!isPressedDown) return;
-  e.preventDefault();
-  const x = e.pageX - container.offsetLeft;
-  const walk = x - startX;
-  container.scrollLeft = scrollLeft - walk;
-});
-
-const menuIcon = document.getElementById('menu-icon');
-  const dropdown = document.getElementById('dropdown');
-  const menuIconImg = menuIcon.querySelector('img');
-
-  menuIcon.addEventListener('click', () => {
-    // Toggle dropdown visibility
-    dropdown.classList.toggle('open');
-    console.log("here");
-
-    // Toggle icon between menu and cancel
-    if (dropdown.classList.contains('open')) {
-      console.log("here");
-      menuIconImg.src = 'images/icons/cancel_icon.png'; // Change to cancel icon
-    } else {
-      console.log("here2");
-      menuIconImg.src = 'images/icons/menu_icon.png'; // Change back to menu icon
-    }
+scrollLeftButton.addEventListener('click', () => {
+  scrollingCards.scrollBy({
+    left: -360,  // Adjust the scroll distance if necessary
+    behavior: 'smooth'
   });
+});
+
+scrollRightButton.addEventListener('click', () => {
+  scrollingCards.scrollBy({
+    left: 360,   // Adjust the scroll distance if necessary
+    behavior: 'smooth'
+  });
+});
+
+
+// Mobile menu dropdown
+const menuIcon = document.getElementById('menu-icon');
+const dropdown = document.getElementById('dropdown');
+const menuIconImg = menuIcon.querySelector('img');
+
+menuIcon.addEventListener('click', () => {
+  dropdown.classList.toggle('open');
+  console.log("here");
+
+  if (dropdown.classList.contains('open')) {
+    console.log("here");
+    menuIconImg.src = 'images/icons/cancel_icon.png';
+  } else {
+    console.log("here2");
+    menuIconImg.src = 'images/icons/menu_icon.png';
+  }
+});
